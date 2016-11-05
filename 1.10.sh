@@ -24,7 +24,7 @@ set -e
 #
 
 url='https://get.docker.com/'
-docker_version=1.10.3
+docker_version=1.11.2
 
 command_exists() {
 	command -v "$@" > /dev/null 2>&1
@@ -467,6 +467,10 @@ do_install() {
 				set -x
 				$sh_c 'sleep 3; emerge app-emulation/docker'
 			)
+			exit 0
+			;;
+		CoreOS)
+			systemctl enable docker
 			exit 0
 			;;
 	esac
