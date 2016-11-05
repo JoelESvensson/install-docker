@@ -469,7 +469,7 @@ do_install() {
 			)
 			exit 0
 			;;
-		CoreOS)
+		coreos)
 			systemctl enable docker
 			exit 0
 			;;
