@@ -470,7 +470,7 @@ do_install() {
 			exit 0
 			;;
 		coreos)
-			systemctl enable docker
+			sudo systemctl enable docker
 			exit 0
 			;;
 	esac
